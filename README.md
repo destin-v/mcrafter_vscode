@@ -17,7 +17,38 @@ This project implements a sophisticated multi-agent system where AI agents colla
 - **LLM Integration**: AI-powered decision making and planning
 
 ## 🚀 Quick Start
+```bash
+brew install podman
+```
+```bash
+podman run --detach --publish 8080:8080 ghcr.io/destin-v/mcrafter_vscode:latest
+```
 
+> [!TIP]
+> If you need X11 display forwarding run:
+```bash
+podman run --detach \
+   --net=host \
+   --env="DISPLAY" \
+   --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
+   --publish 8080:8080 \
+   ghcr.io/destin-v/mcrafter_vscode:latest
+```
+
+From a web browser:
+```bash
+http://localhost:8080/?folder=/root/crafter_vscode
+```
+
+Open a terminal with `Control-J`.  Then type:
+
+```bash
+claude
+```
+
+Follow the setup instructions to setup Claude Code.
+
+## 🛠️ Manual Install
 ### Environment Setup
 
 1. **Install Dependencies**
